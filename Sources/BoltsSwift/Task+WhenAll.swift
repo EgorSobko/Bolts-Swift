@@ -8,6 +8,7 @@
  */
 
 import Foundation
+import Darwin
 
 //--------------------------------------
 // MARK: - WhenAll
@@ -35,7 +36,7 @@ extension Task {
         tasks.forEach {
             $0.continueWith { task -> Void in
                 if task.cancelled {
-                    OSAtomicIncrement32(&cancelledCount)
+                     OSAtomicIncrement32(&cancelledCount)
                 } else if task.faulted {
                     OSAtomicIncrement32(&errorCount)
                 }

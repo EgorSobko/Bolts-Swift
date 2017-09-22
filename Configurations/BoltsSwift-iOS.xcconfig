@@ -7,8 +7,6 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#include "Shared/Platform/iOS.xcconfig"
-#include "Shared/Product/DynamicFramework.xcconfig"
 #include "Version.xcconfig"
 
 PRODUCT_NAME = BoltsSwift
@@ -16,6 +14,6 @@ PRODUCT_BUNDLE_IDENTIFIER = com.bolts.swift.ios
 
 IPHONEOS_DEPLOYMENT_TARGET = 8.0
 
-SWIFT_VERSION = 3.0
+SWIFT_VERSION = 4.0
 
 INFOPLIST_FILE = $(SRCROOT)/Sources/Info.plist
